@@ -12,6 +12,6 @@ import SwiftUI
 public extension ComponentKit {
     enum ButtonType {
         case symbol(_ systemName: String, weight: SwiftUI.Font.Weight?, usesIntrinsicSize: Bool)
-        case text(_ text: String, font: ComponentKit.Font)
+        case text(_ text: String, font: ComponentKit.Font, isInspectable: Bool)
     }
 }

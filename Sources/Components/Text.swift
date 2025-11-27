@@ -12,12 +12,10 @@ import SwiftUI
 private struct Text: View {
     // MARK: - Properties
 
-    // Color
-    private let foregroundColor: Color
-    private let secondaryForegroundColor: Color?
-
-    // Other
     private let font: ComponentKit.Font
+    private let foregroundColor: Color
+    private let isInspectable: Bool
+    private let secondaryForegroundColor: Color?
     private let text: String
 
     // MARK: - Init
@@ -26,18 +24,30 @@ private struct Text: View {
         _ text: String,
         font: ComponentKit.Font,
         foregroundColor: Color,
-        secondaryForegroundColor: Color?
+        secondaryForegroundColor: Color?,
+        isInspectable: Bool
     ) {
         self.text = text
         self.font = font
         self.foregroundColor = foregroundColor
         self.secondaryForegroundColor = secondaryForegroundColor
+        self.isInspectable = isInspectable
     }
 
     // MARK: - View
 
     @ViewBuilder
     public var body: some View {
+        if isInspectable {
+            contentView
+                .inspectable(text.hashValue)
+        } else {
+            contentView
+        }
+    }
+
+    @ViewBuilder
+    private var contentView: some View {
         let text = SwiftUI.Text(text)
             .dynamicTypeSize(.large)
             .font(font.model)
@@ -66,13 +76,15 @@ public extension ComponentKit {
         _ text: String,
         font: Font = .system,
         foregroundColor: Color,
-        secondaryForegroundColor: Color? = nil
+        secondaryForegroundColor: Color? = nil,
+        isInspectable: Bool = false
     ) -> some View {
         Text(
             text,
             font: font,
             foregroundColor: foregroundColor,
-            secondaryForegroundColor: secondaryForegroundColor
+            secondaryForegroundColor: secondaryForegroundColor,
+            isInspectable: isInspectable
         )
     }
 }

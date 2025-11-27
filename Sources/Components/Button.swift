@@ -12,12 +12,9 @@ import SwiftUI
 private struct Button: View {
     // MARK: - Properties
 
-    // Color
+    private let action: () -> Void
     private let foregroundColor: Color
     private let secondaryForegroundColor: Color?
-
-    // Other
-    private let action: () -> Void
     private let type: ComponentKit.ButtonType
 
     // MARK: - Init
@@ -41,7 +38,11 @@ private struct Button: View {
             action()
         } label: {
             switch type {
-            case let .symbol(systemName, weight: weight, usesIntrinsicSize: usesIntrinsicSize):
+            case let .symbol(
+                systemName,
+                weight: weight,
+                usesIntrinsicSize: usesIntrinsicSize
+            ):
                 Components.symbol(
                     systemName,
                     foregroundColor: foregroundColor,
@@ -50,12 +51,17 @@ private struct Button: View {
                     usesIntrinsicSize: usesIntrinsicSize
                 )
 
-            case let .text(text, font: font):
+            case let .text(
+                text,
+                font: font,
+                isInspectable: isInspectable
+            ):
                 Components.text(
                     text,
                     font: font,
                     foregroundColor: foregroundColor,
-                    secondaryForegroundColor: secondaryForegroundColor
+                    secondaryForegroundColor: secondaryForegroundColor,
+                    isInspectable: isInspectable
                 )
             }
         }
@@ -84,10 +90,11 @@ public extension ComponentKit {
         font: Font,
         foregroundColor: Color,
         secondaryForegroundColor: Color? = nil,
+        isInspectable: Bool = false,
         action: @escaping () -> Void
     ) -> some View {
         Button(
-            .text(text, font: font),
+            .text(text, font: font, isInspectable: isInspectable),
             foregroundColor: foregroundColor,
             secondaryForegroundColor: secondaryForegroundColor,
             action: action
