@@ -16,11 +16,8 @@ private struct Symbol: View {
 
     // MARK: - Properties
 
-    // Color
     private let foregroundColor: Color
     private let secondaryForegroundColor: Color?
-
-    // Other
     private let systemName: String
     private let usesIntrinsicSize: Bool
     private let weight: Font.Weight?
