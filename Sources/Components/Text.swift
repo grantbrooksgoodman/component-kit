@@ -24,14 +24,14 @@ private struct Text: View {
         _ text: String,
         font: ComponentKit.Font,
         foregroundColor: Color,
-        secondaryForegroundColor: Color?,
-        isInspectable: Bool
+        isInspectable: Bool,
+        secondaryForegroundColor: Color?
     ) {
         self.text = text
         self.font = font
         self.foregroundColor = foregroundColor
-        self.secondaryForegroundColor = secondaryForegroundColor
         self.isInspectable = isInspectable
+        self.secondaryForegroundColor = secondaryForegroundColor
     }
 
     // MARK: - View
@@ -83,8 +83,8 @@ public extension ComponentKit {
             text,
             font: font,
             foregroundColor: foregroundColor,
-            secondaryForegroundColor: secondaryForegroundColor,
-            isInspectable: isInspectable
+            isInspectable: isInspectable,
+            secondaryForegroundColor: secondaryForegroundColor
         )
     }
 }
