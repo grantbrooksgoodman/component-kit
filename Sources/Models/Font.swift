@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 public extension ComponentKit {
-    struct Font {
+    struct Font: Sendable {
         // MARK: - Properties
 
         public let scale: FontScale

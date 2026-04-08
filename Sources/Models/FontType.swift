@@ -9,7 +9,7 @@
 import Foundation
 
 public extension ComponentKit {
-    enum FontType {
+    enum FontType: Sendable {
         // MARK: - Cases
 
         case custom(name: String, isItalic: Bool = false, isUnderlined: Bool = false)

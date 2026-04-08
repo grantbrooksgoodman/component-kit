@@ -16,7 +16,7 @@ public extension ComponentKit {
     // MARK: - Types
 
     /// https://developer.apple.com/design/human-interface-guidelines/typography#iOS-iPadOS-Dynamic-Type-sizes
-    enum FontScale {
+    enum FontScale: Sendable {
         /* MARK: Cases */
 
         case custom(CGFloat)

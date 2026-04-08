@@ -11,6 +11,6 @@ import Foundation
 // swiftlint:disable:next identifier_name
 public let Components = ComponentKit()
 
-public struct ComponentKit {
+public struct ComponentKit: Sendable {
     fileprivate init() {}
 }

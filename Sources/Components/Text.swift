@@ -71,6 +71,7 @@ private struct Text: View {
     }
 }
 
+@MainActor
 public extension ComponentKit {
     func text(
         _ text: String,

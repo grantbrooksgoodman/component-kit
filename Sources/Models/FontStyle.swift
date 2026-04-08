@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 public extension ComponentKit {
-    enum FontStyle {
+    enum FontStyle: Sendable {
         // MARK: - Cases
 
         case bold(isItalic: Bool = false, isUnderlined: Bool = false)

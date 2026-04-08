@@ -76,6 +76,7 @@ private struct Symbol: View {
     }
 }
 
+@MainActor
 public extension ComponentKit {
     /// - Note: Passing a non-`nil` value for `weight` will have no effect unless `usesIntrinsicSize` is set to `false`.
     func symbol(

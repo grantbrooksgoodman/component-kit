@@ -68,6 +68,7 @@ private struct Button: View {
     }
 }
 
+@MainActor
 public extension ComponentKit {
     func button(
         symbolName: String,
