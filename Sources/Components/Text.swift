@@ -20,7 +20,7 @@ private struct Text: View {
 
     // MARK: - Init
 
-    public init(
+    fileprivate init(
         _ text: String,
         font: ComponentKit.Font,
         foregroundColor: Color,
@@ -37,7 +37,7 @@ private struct Text: View {
     // MARK: - View
 
     @ViewBuilder
-    public var body: some View {
+    var body: some View {
         if isInspectable {
             contentView
                 .inspectable(text.hashValue)

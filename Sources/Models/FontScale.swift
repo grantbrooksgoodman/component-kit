@@ -35,19 +35,19 @@ public extension ComponentKit {
 
         /* MARK: Properties */
 
-        public var points: CGFloat {
+        var points: CGFloat {
             switch self {
             case let .custom(points):
-                return points
+                points
 
             case .large:
-                return Floats.largeFontScalePointValue
+                Floats.largeFontScalePointValue
 
             case .medium:
-                return Floats.mediumFontScalePointValue
+                Floats.mediumFontScalePointValue
 
             case .small:
-                return Floats.smallFontScalePointValue
+                Floats.smallFontScalePointValue
             }
         }
     }

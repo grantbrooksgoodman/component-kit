@@ -8,18 +8,18 @@
 /* Native */
 import Foundation
 
-public extension ComponentKit {
+extension ComponentKit {
     enum Constants {
         // MARK: - CGFloat
 
-        public enum CGFloats {}
+        enum CGFloats {}
 
         // MARK: - Color
 
-        public enum Colors {}
+        enum Colors {}
 
         // MARK: - String
 
-        public enum Strings {}
+        enum Strings {}
     }
 }

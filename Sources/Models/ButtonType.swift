@@ -11,7 +11,16 @@ import SwiftUI
 
 public extension ComponentKit {
     enum ButtonType: Sendable {
-        case symbol(_ systemName: String, weight: SwiftUI.Font.Weight?, usesIntrinsicSize: Bool)
-        case text(_ text: String, font: ComponentKit.Font, isInspectable: Bool)
+        case symbol(
+            _ systemName: String,
+            weight: SwiftUI.Font.Weight?,
+            usesIntrinsicSize: Bool
+        )
+
+        case text(
+            _ text: String,
+            font: ComponentKit.Font,
+            isInspectable: Bool
+        )
     }
 }

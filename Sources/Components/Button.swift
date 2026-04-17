@@ -19,7 +19,7 @@ private struct Button: View {
 
     // MARK: - Init
 
-    public init(
+    fileprivate init(
         _ type: ComponentKit.ButtonType,
         foregroundColor: Color,
         secondaryForegroundColor: Color?,
@@ -33,7 +33,7 @@ private struct Button: View {
 
     // MARK: - View
 
-    public var body: some View {
+    var body: some View {
         SwiftUI.Button {
             action()
         } label: {

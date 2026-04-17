@@ -42,7 +42,7 @@ private struct Symbol: View {
 
     // MARK: - Init
 
-    public init(
+    fileprivate init(
         _ systemName: String,
         foregroundColor: Color,
         secondaryForegroundColor: Color?,
@@ -59,7 +59,7 @@ private struct Symbol: View {
     // MARK: - View
 
     @ViewBuilder
-    public var body: some View {
+    var body: some View {
         if usesIntrinsicSize {
             intrinsicSizeImage
                 .dynamicTypeSize(.large)
