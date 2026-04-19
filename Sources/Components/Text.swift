@@ -20,7 +20,7 @@ private struct Text: View {
 
     // MARK: - Init
 
-    public init(
+    fileprivate init(
         _ text: String,
         font: ComponentKit.Font,
         foregroundColor: Color,
@@ -37,7 +37,7 @@ private struct Text: View {
     // MARK: - View
 
     @ViewBuilder
-    public var body: some View {
+    var body: some View {
         if isInspectable {
             contentView
                 .inspectable(text.hashValue)
@@ -71,7 +71,48 @@ private struct Text: View {
     }
 }
 
+@MainActor
 public extension ComponentKit {
+    /// Creates a text view with the specified font and foreground
+    /// color.
+    ///
+    /// Use this method to display a styled string in your
+    /// interface:
+    ///
+    /// ```swift
+    /// Components.text(
+    ///     "Hello, world!",
+    ///     font: .systemBold(scale: .large),
+    ///     foregroundColor: .primary
+    /// )
+    /// ```
+    ///
+    /// To apply a secondary foreground color for hierarchical
+    /// styling, pass a value for `secondaryForegroundColor`:
+    ///
+    /// ```swift
+    /// Components.text(
+    ///     "Important",
+    ///     font: .systemSemibold,
+    ///     foregroundColor: .red,
+    ///     secondaryForegroundColor: .orange
+    /// )
+    /// ```
+    ///
+    /// - Parameters:
+    ///   - text: The string to display.
+    ///   - font: The font to apply to the text. Defaults to
+    ///     ``Font/system``.
+    ///   - foregroundColor: The primary color of the text.
+    ///   - secondaryForegroundColor: A secondary color for
+    ///     hierarchical foreground styling, or `nil` for a
+    ///     single-color style. Defaults to `nil`.
+    ///   - isInspectable: A Boolean value that indicates whether
+    ///     the view includes a hidden inspection marker for
+    ///     testing. Defaults to `false`.
+    ///
+    /// - Returns: A text view styled with the specified font and
+    ///   color.
     func text(
         _ text: String,
         font: Font = .system,

@@ -10,8 +10,8 @@ import Foundation
 
 // MARK: - String
 
-public extension ComponentKit.Constants.Strings {
+extension ComponentKit.Constants.Strings {
     enum Symbol {
-        public static let fallbackImageSystemName = "exclamationmark.triangle"
+        static let fallbackImageSystemName = "exclamationmark.triangle"
     }
 }

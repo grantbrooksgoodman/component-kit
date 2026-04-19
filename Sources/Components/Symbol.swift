@@ -42,7 +42,7 @@ private struct Symbol: View {
 
     // MARK: - Init
 
-    public init(
+    fileprivate init(
         _ systemName: String,
         foregroundColor: Color,
         secondaryForegroundColor: Color?,
@@ -59,7 +59,7 @@ private struct Symbol: View {
     // MARK: - View
 
     @ViewBuilder
-    public var body: some View {
+    var body: some View {
         if usesIntrinsicSize {
             intrinsicSizeImage
                 .dynamicTypeSize(.large)
@@ -76,8 +76,52 @@ private struct Symbol: View {
     }
 }
 
+@MainActor
 public extension ComponentKit {
-    /// - Note: Passing a non-`nil` value for `weight` will have no effect unless `usesIntrinsicSize` is set to `false`.
+    /// Creates a symbol image view for the specified system symbol
+    /// name.
+    ///
+    /// Use this method to display an SF Symbol in your interface:
+    ///
+    /// ```swift
+    /// Components.symbol(
+    ///     "star.fill",
+    ///     foregroundColor: .yellow
+    /// )
+    /// ```
+    ///
+    /// By default, the symbol renders at its intrinsic size. To
+    /// make the symbol resizable – for example, to fill a parent
+    /// container – set `usesIntrinsicSize` to `false`:
+    ///
+    /// ```swift
+    /// Components.symbol(
+    ///     "heart.fill",
+    ///     foregroundColor: .red,
+    ///     weight: .semibold,
+    ///     usesIntrinsicSize: false
+    /// )
+    /// ```
+    ///
+    /// - Parameters:
+    ///   - systemName: The name of the system symbol to display.
+    ///     If the name does not match a valid system symbol, a
+    ///     warning symbol is displayed instead.
+    ///   - foregroundColor: The primary color of the symbol.
+    ///   - secondaryForegroundColor: A secondary color for
+    ///     hierarchical foreground styling, or `nil` for a
+    ///     single-color style. Defaults to `nil`.
+    ///   - weight: The font weight to apply to the symbol.
+    ///     Defaults to `nil`.
+    ///   - usesIntrinsicSize: A Boolean value that determines
+    ///     whether the symbol renders at its intrinsic size. Pass
+    ///     `false` to make the symbol resizable. Defaults to
+    ///     `true`.
+    ///
+    /// - Returns: A view that displays the specified symbol.
+    ///
+    /// - Note: Passing a non-`nil` value for `weight` has no
+    ///   effect unless `usesIntrinsicSize` is set to `false`.
     func symbol(
         _ systemName: String,
         foregroundColor: Color,

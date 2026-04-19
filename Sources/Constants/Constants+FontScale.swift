@@ -10,10 +10,10 @@ import Foundation
 
 // MARK: - CGFloat
 
-public extension ComponentKit.Constants.CGFloats {
+extension ComponentKit.Constants.CGFloats {
     enum FontScale {
-        public static let largeFontScalePointValue: CGFloat = 28
-        public static let mediumFontScalePointValue: CGFloat = 17
-        public static let smallFontScalePointValue: CGFloat = 13
+        static let largeFontScalePointValue: CGFloat = 28
+        static let mediumFontScalePointValue: CGFloat = 17
+        static let smallFontScalePointValue: CGFloat = 13
     }
 }
