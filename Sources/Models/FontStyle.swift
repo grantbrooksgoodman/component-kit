@@ -10,35 +10,56 @@ import Foundation
 import SwiftUI
 
 public extension ComponentKit {
+    /// The weight and style attributes of a system font.
+    ///
+    /// Use `FontStyle` to specify a system font's weight alongside
+    /// optional italic and underline styling:
+    ///
+    /// ```swift
+    /// let style: ComponentKit.FontStyle = .semibold(
+    ///     isItalic: true
+    /// )
+    /// ```
+    ///
+    /// Each case corresponds to a standard font weight and accepts
+    /// optional `isItalic` and `isUnderlined` parameters that both
+    /// default to `false`. Use ``custom(_:isItalic:isUnderlined:)``
+    /// to specify an arbitrary `UIFont.Weight`.
     enum FontStyle: Sendable {
         // MARK: - Cases
 
+        /// A bold font weight.
         case bold(
             isItalic: Bool = false,
             isUnderlined: Bool = false
         )
 
+        /// A font weight specified as a `UIFont.Weight` value.
         case custom(
             UIFont.Weight,
             isItalic: Bool = false,
             isUnderlined: Bool = false
         )
 
+        /// A light font weight.
         case light(
             isItalic: Bool = false,
             isUnderlined: Bool = false
         )
 
+        /// A medium font weight.
         case medium(
             isItalic: Bool = false,
             isUnderlined: Bool = false
         )
 
+        /// A regular font weight.
         case regular(
             isItalic: Bool = false,
             isUnderlined: Bool = false
         )
 
+        /// A semibold font weight.
         case semibold(
             isItalic: Bool = false,
             isUnderlined: Bool = false
