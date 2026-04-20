@@ -9,7 +9,6 @@ let package = Package(
     name: "ComponentKit",
     platforms: [
         .iOS(.v17),
-        .tvOS(.v17),
     ],
     products: [
         .library(
@@ -26,8 +25,8 @@ let package = Package(
             name: "ComponentKit",
             dependencies: [],
             path: "Sources",
+            swiftSettings: [.swiftLanguageMode(.v6)],
             plugins: [ /* .plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLint") */ ]
         ),
-    ],
-    swiftLanguageModes: [.v6]
+    ]
 )
