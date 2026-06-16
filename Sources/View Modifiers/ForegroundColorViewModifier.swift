@@ -17,14 +17,17 @@ private struct ForegroundColorViewModifier: ViewModifier {
 
     // MARK: - Init
 
-    public init(_ primary: Color, _ secondary: Color?) {
+    init(
+        _ primary: Color,
+        _ secondary: Color?
+    ) {
         self.primary = primary
         self.secondary = secondary
     }
 
     // MARK: - Body
 
-    public func body(content: Content) -> some View {
+    func body(content: Content) -> some View {
         if let secondary {
             content
                 .foregroundStyle(primary, secondary)

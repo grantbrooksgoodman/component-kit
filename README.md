@@ -1,6 +1,6 @@
 # ComponentKit
 
-A Swift package for creating styled text, button, and symbol views in SwiftUI.
+A framework for creating styled text, button, and symbol views in SwiftUI.
 
 ---
 
@@ -62,7 +62,7 @@ struct ContentView: View {
 
 | Platform | Minimum Version |
 | --- | --- |
-| iOS | 17.0 |
+| iOS | 18.0 |
 
 ComponentKit has no external dependencies.
 

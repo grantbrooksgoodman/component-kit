@@ -36,7 +36,6 @@ private struct Text: View {
 
     // MARK: - View
 
-    @ViewBuilder
     var body: some View {
         if isInspectable {
             contentView
@@ -108,8 +107,8 @@ public extension ComponentKit {
     ///     hierarchical foreground styling, or `nil` for a
     ///     single-color style. Defaults to `nil`.
     ///   - isInspectable: A Boolean value that indicates whether
-    ///     the view includes a hidden inspection marker for
-    ///     testing. Defaults to `false`.
+    ///     the view is inspectable within the view hierarchy.
+    ///     Defaults to `false`.
     ///
     /// - Returns: A text view styled with the specified font and
     ///   color.
