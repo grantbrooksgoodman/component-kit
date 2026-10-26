@@ -58,7 +58,6 @@ private struct Symbol: View {
 
     // MARK: - View
 
-    @ViewBuilder
     var body: some View {
         if usesIntrinsicSize {
             intrinsicSizeImage
