@@ -41,7 +41,15 @@ private struct ForegroundColorViewModifier: ViewModifier {
 }
 
 extension View {
-    func foregroundColor(_ primary: Color, _ secondary: Color?) -> some View {
-        modifier(ForegroundColorViewModifier(primary, secondary))
+    func foregroundColor(
+        _ primary: Color,
+        _ secondary: Color?
+    ) -> some View {
+        modifier(
+            ForegroundColorViewModifier(
+                primary,
+                secondary
+            )
+        )
     }
 }

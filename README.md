@@ -30,6 +30,7 @@ The library defines distinct types for font configuration – typeface, weight, 
 
 ```swift
 import ComponentKit
+import SwiftUI
 
 struct ContentView: View {
     var body: some View {
@@ -76,7 +77,7 @@ ComponentKit is distributed as a Swift package. Add it to your project using [Sw
 
 ## Components
 
-All components are accessed through the [`Components`](Sources/ComponentKit.swift) constant. Each method returns a SwiftUI view configured with the specified font and foreground color.
+All components are accessed through the [`Components`](Sources/ComponentKit.swift) constant. Each method returns a SwiftUI view configured with the specified foreground color.
 
 ### Creating Text Views
 
@@ -114,7 +115,7 @@ Components.symbol(
 )
 ```
 
-If the specified name does not match a valid system symbol, a warning symbol is displayed instead.
+If `usesIntrinsicSize` is `true` and the specified name does not match a valid system symbol, a warning symbol is displayed instead.
 
 > **Note:** Passing a non-`nil` value for `weight` has no effect unless `usesIntrinsicSize` is set to `false`.
 

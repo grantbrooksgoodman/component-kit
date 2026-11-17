@@ -17,7 +17,9 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.regular` weight at the specified scale.
-    static func system(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func system(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
             .system(style: .regular()),
             scale: scale
@@ -32,7 +34,9 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.regular` weight and underlined style at the specified scale.
-    static func systemUnderlined(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemUnderlined(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
             .system(style: .regular(isUnderlined: true)),
             scale: scale
@@ -47,7 +51,9 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.regular` weight and italic style at the specified scale.
-    static func systemItalic(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemItalic(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
             .system(style: .regular(isItalic: true)),
             scale: scale
@@ -62,9 +68,16 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.regular` weight and underlined italic style at the specified scale.
-    static func systemUnderlinedItalic(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemUnderlinedItalic(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
-            .system(style: .regular(isItalic: true, isUnderlined: true)),
+            .system(
+                style: .regular(
+                    isItalic: true,
+                    isUnderlined: true
+                )
+            ),
             scale: scale
         )
     }
@@ -77,7 +90,9 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.bold` weight at the specified scale.
-    static func systemBold(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemBold(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
             .system(style: .bold()),
             scale: scale
@@ -92,7 +107,9 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.bold` weight and underlined style at the specified scale.
-    static func systemBoldUnderlined(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemBoldUnderlined(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
             .system(style: .bold(isUnderlined: true)),
             scale: scale
@@ -107,7 +124,9 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.bold` weight and italic style at the specified scale.
-    static func systemBoldItalic(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemBoldItalic(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
             .system(style: .bold(isItalic: true)),
             scale: scale
@@ -122,9 +141,16 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.bold` weight and underlined italic style at the specified scale.
-    static func systemBoldUnderlinedItalic(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemBoldUnderlinedItalic(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
-            .system(style: .bold(isItalic: true, isUnderlined: true)),
+            .system(
+                style: .bold(
+                    isItalic: true,
+                    isUnderlined: true
+                )
+            ),
             scale: scale
         )
     }
@@ -137,7 +163,9 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.light` weight at the specified scale.
-    static func systemLight(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemLight(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
             .system(style: .light()),
             scale: scale
@@ -152,7 +180,9 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.light` weight and underlined style at the specified scale.
-    static func systemLightUnderlined(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemLightUnderlined(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
             .system(style: .light(isUnderlined: true)),
             scale: scale
@@ -167,7 +197,9 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.light` weight and italic style at the specified scale.
-    static func systemLightItalic(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemLightItalic(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
             .system(style: .light(isItalic: true)),
             scale: scale
@@ -182,9 +214,16 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.light` weight and underlined italic style at the specified scale.
-    static func systemLightUnderlinedItalic(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemLightUnderlinedItalic(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
-            .system(style: .light(isItalic: true, isUnderlined: true)),
+            .system(
+                style: .light(
+                    isItalic: true,
+                    isUnderlined: true
+                )
+            ),
             scale: scale
         )
     }
@@ -197,7 +236,9 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.medium` weight at the specified scale.
-    static func systemMedium(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemMedium(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
             .system(style: .medium()),
             scale: scale
@@ -212,7 +253,9 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.medium` weight and underlined style at the specified scale.
-    static func systemMediumUnderlined(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemMediumUnderlined(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
             .system(style: .medium(isUnderlined: true)),
             scale: scale
@@ -227,7 +270,9 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.medium` weight and italic style at the specified scale.
-    static func systemMediumItalic(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemMediumItalic(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
             .system(style: .medium(isItalic: true)),
             scale: scale
@@ -242,9 +287,16 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.medium` weight and underlined italic style at the specified scale.
-    static func systemMediumUnderlinedItalic(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemMediumUnderlinedItalic(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
-            .system(style: .medium(isItalic: true, isUnderlined: true)),
+            .system(
+                style: .medium(
+                    isItalic: true,
+                    isUnderlined: true
+                )
+            ),
             scale: scale
         )
     }
@@ -257,7 +309,9 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.semibold` weight at the specified scale.
-    static func systemSemibold(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemSemibold(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
             .system(style: .semibold()),
             scale: scale
@@ -272,7 +326,9 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.semibold` weight and underlined style at the specified scale.
-    static func systemSemiboldUnderlined(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemSemiboldUnderlined(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
             .system(style: .semibold(isUnderlined: true)),
             scale: scale
@@ -287,7 +343,9 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.semibold` weight and italic style at the specified scale.
-    static func systemSemiboldItalic(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemSemiboldItalic(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
             .system(style: .semibold(isItalic: true)),
             scale: scale
@@ -302,9 +360,16 @@ public extension ComponentKit.Font {
     }
 
     /// System font with `.semibold` weight and underlined italic style at the specified scale.
-    static func systemSemiboldUnderlinedItalic(scale: ComponentKit.FontScale) -> ComponentKit.Font {
+    static func systemSemiboldUnderlinedItalic(
+        scale: ComponentKit.FontScale
+    ) -> ComponentKit.Font {
         .init(
-            .system(style: .semibold(isItalic: true, isUnderlined: true)),
+            .system(
+                style: .semibold(
+                    isItalic: true,
+                    isUnderlined: true
+                )
+            ),
             scale: scale
         )
     }

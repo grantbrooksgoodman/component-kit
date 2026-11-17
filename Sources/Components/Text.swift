@@ -34,7 +34,7 @@ private struct Text: View {
         self.secondaryForegroundColor = secondaryForegroundColor
     }
 
-    // MARK: - View
+    // MARK: - Body
 
     var body: some View {
         if isInspectable {

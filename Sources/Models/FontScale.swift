@@ -9,12 +9,6 @@
 import Foundation
 
 public extension ComponentKit {
-    // MARK: - Type Aliases
-
-    private typealias Floats = Constants.CGFloats.FontScale
-
-    // MARK: - Types
-
     /// The point size of a font, corresponding to standard iOS
     /// Dynamic Type sizes.
     ///
@@ -31,7 +25,11 @@ public extension ComponentKit {
     /// [Typography](https://developer.apple.com/design/human-interface-guidelines/typography#iOS-iPadOS-Dynamic-Type-sizes)
     /// in the Human Interface Guidelines.
     enum FontScale: Sendable {
-        /* MARK: Cases */
+        // - MARK: Constants Accessors
+
+        private typealias Floats = Constants.CGFloats.FontScale
+
+        // - MARK: Cases
 
         /// A custom point size.
         case custom(CGFloat)
@@ -48,7 +46,7 @@ public extension ComponentKit {
         /// Dynamic Type size.
         case small
 
-        /* MARK: Properties */
+        // - MARK: Properties
 
         /// The size of the font in points.
         public var points: CGFloat {

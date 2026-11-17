@@ -31,7 +31,7 @@ private struct Button: View {
         self.action = action
     }
 
-    // MARK: - View
+    // MARK: - Body
 
     var body: some View {
         SwiftUI.Button {
@@ -109,7 +109,11 @@ public extension ComponentKit {
         action: @escaping () -> Void
     ) -> some View {
         Button(
-            .symbol(symbolName, weight: weight, usesIntrinsicSize: usesIntrinsicSize),
+            .symbol(
+                symbolName,
+                weight: weight,
+                usesIntrinsicSize: usesIntrinsicSize
+            ),
             foregroundColor: foregroundColor,
             secondaryForegroundColor: secondaryForegroundColor,
             action: action
@@ -154,7 +158,11 @@ public extension ComponentKit {
         action: @escaping () -> Void
     ) -> some View {
         Button(
-            .text(text, font: font, isInspectable: isInspectable),
+            .text(
+                text,
+                font: font,
+                isInspectable: isInspectable
+            ),
             foregroundColor: foregroundColor,
             secondaryForegroundColor: secondaryForegroundColor,
             action: action

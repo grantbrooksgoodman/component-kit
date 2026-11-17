@@ -56,7 +56,7 @@ private struct Symbol: View {
         self.usesIntrinsicSize = usesIntrinsicSize
     }
 
-    // MARK: - View
+    // MARK: - Body
 
     var body: some View {
         if usesIntrinsicSize {
@@ -104,8 +104,9 @@ public extension ComponentKit {
     ///
     /// - Parameters:
     ///   - systemName: The name of the system symbol to display.
-    ///     If the name does not match a valid system symbol, a
-    ///     warning symbol is displayed instead.
+    ///     If `usesIntrinsicSize` is `true` and the name does not
+    ///     match a valid system symbol, a warning symbol is
+    ///     displayed instead.
     ///   - foregroundColor: The primary color of the symbol.
     ///   - secondaryForegroundColor: A secondary color for
     ///     hierarchical foreground styling, or `nil` for a

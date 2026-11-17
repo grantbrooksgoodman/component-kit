@@ -67,11 +67,10 @@ public extension ComponentKit {
 
         /// The SwiftUI font representation of this value.
         ///
-        /// This property converts the font's type and scale into
-        /// a `SwiftUI.Font` suitable for use with SwiftUI views.
-        /// For custom fonts, if the specified font name is
-        /// unavailable, the system font at the same point size is
-        /// used as a fallback.
+        /// Converts the font's type and scale into a `SwiftUI.Font`
+        /// suitable for use with SwiftUI views. For custom fonts, if
+        /// the specified font name is unavailable, the system font at
+        /// the same point size is used as a fallback.
         public var model: SwiftUI.Font {
             switch type {
             case let .custom(
@@ -83,6 +82,7 @@ public extension ComponentKit {
                     name: fontName,
                     size: scale.points
                 ) ?? .systemFont(ofSize: scale.points)
+
                 return isItalic ? .init(uiFont).italic() : .init(uiFont)
 
             case let .system(style: style):
@@ -90,6 +90,7 @@ public extension ComponentKit {
                     ofSize: scale.points,
                     weight: style.weight
                 )
+
                 return style.isItalic ? .init(uiFont).italic() : .init(uiFont)
             }
         }
